@@ -4,7 +4,7 @@
 
 与本Demo相关的博客整理：
 
-Angular基础教程+Demo项目——尽可能全面一些——第一节
+Angular基础教程+Demo项目——尽可能全面一些——第一节:https://blog.csdn.net/Burnup_110/article/details/109753055
 
 来点啰嗦：Angular是一个不错的框架，对于我这种追于简单应用的后端程序员来说，是一个较友好的前端框架了，
 当然也不能一概而论，还是需要一些前端基础的。
