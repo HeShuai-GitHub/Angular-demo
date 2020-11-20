@@ -1,0 +1,149 @@
+<h2>我是一个头部组件</h2>
+
+
+<h1>Angular 数据绑定</h1>
+<h3>{{data}}</h3>
+<h3>{{data1}}</h3>
+<h3>{{data2}}</h3>
+<h3>{{data3}}</h3>
+<!--<h3>{{data4}}</h3>-->
+<!--<h3>{{data5}}</h3>-->
+<br>
+<br>
+<hr/>
+<br>
+<br>
+<h1>Angular 属性绑定</h1>
+<input readonly="readonly" [value]="data6">
+<br>
+<br>
+<hr/>
+<br>
+<br>
+<h1>Angular 简单数学运算</h1>
+<h3>1+2={{1+2}}</h3>
+<br>
+<br>
+<hr/>
+<br>
+<br>
+<h1>Angular 数组循环</h1>
+<ol>
+  <li *ngFor="let item of arr">
+    {{item}}
+  </li>
+</ol>
+<br>
+<ul>
+  <li *ngFor="let item of arr1;let key = index;">
+    {{item.name}},{{item.age}}--{{key}}
+  </li>
+</ul>
+<br>
+<ul>
+  <li *ngFor="let item of arr2">
+    {{item.name}}
+    <br>
+    <ol>
+      <li *ngFor="let content of item.content">
+        {{content}}
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr/>
+<h1>图片展示</h1>
+<img [src]="img" style="max-width: 80px">
+<br>
+<br>
+<hr/>
+<br>
+<br>
+<br>
+<br>
+<h1>条件判断——ngif,ngswitch</h1>
+<div>
+  <h3>ngif 展示:</h3>
+  <p *ngIf="flag">我是true</p>
+  <p *ngIf="false">false</p>
+</div>
+<div [ngSwitch]="choose">
+  <h3>ngswitch 展示:</h3>
+  <p *ngSwitchCase="1">我是1</p>
+  <p *ngSwitchCase="2">我是2</p>
+  <p *ngSwitchDefault>--其实我是个不得已的选择--（~_~）</p>
+</div>
+<br>
+<br>
+<hr/>
+<br>
+<br>
+<br>
+<br>
+<h1>class、style展示，[ngClass]/[ngStyle]</h1>
+<h3>ngClass 展示:</h3>
+<div [ngClass]="{'red':true}">你在我心中是最美诶！</div>
+<div [ngClass]="{'red':true,'max':flag}">你在我心中是最美诶！</div>
+<h3>ngStyle 展示:</h3>
+<div [ngStyle]="{'color':'blue'}">我是ngStyle-blue</div>
+<div [ngStyle]="{'color':col}">我是ngStyle-yellow</div>
+<br>
+<br>
+<hr/>
+<br>
+<br>
+<br>
+<br>
+<h1>管道</h1>
+<h3>大小写转换管道——lowercase、uppercase</h3>
+<p>{{upper}}转换成小写--{{upper | lowercase}}</p>
+<p>{{lower}}转换成大写--{{lower | uppercase}}</p>
+<br>
+<h3>时间管道——date:'yyyy-MM-dd HH:mm:ss'</h3>
+<p>{{date | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+<br>
+<h3 ngNonBindable>小数管道——参数格式为&#123;最少整数位数}.&#123;最少小数位数}-&#123;最多小数位数}，当小数位数少于规定的&#123;最少小数位数
+  }时，会自动补0，当小数位数多于规定的&#123;最多小数位数}时，会四舍五入</h3>
+<p>{{num | number:'2.3-4'}}</p>
+<br>
+<br>
+<hr/>
+<br>
+<br>
+<br>
+<br>
+<h1>事件</h1>
+<button (click)="show1()">自定义事件提示</button>
+<br>
+<input (keydown)="down($event)">
+<br>
+<br>
+<hr/>
+<br>
+<br>
+<br>
+<br>
+<h1>双向数据绑定——MVVM，只针对Form</h1>
+<h3><input [(ngModel)]="keywords">{{keywords}}</h3>
+<button (click)="setKeywords()">改变值</button>
+<br>
+<button (click)="getKeywords()">获取值-打印在控制台</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

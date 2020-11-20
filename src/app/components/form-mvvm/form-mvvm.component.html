@@ -1,0 +1,46 @@
+<form>
+  <h1>Form 双向数据绑定表单Demo</h1>
+  <div>
+      <div>
+        <label>姓 名：</label>
+        <input name="userName" [(ngModel)]="payload.userName">
+      </div>
+      <div>
+        <label>性 别：</label>
+        <input type="radio" value="1" name="sex" [(ngModel)]="payload.sex">男
+        <input type="radio" value="2" name="sex" [(ngModel)]="payload.sex">女
+      </div>
+      <div>
+        <label>城 市：</label>
+        <select id="city" name="city" [(ngModel)]="payload.citys">
+          <option [value]="i" *ngFor="let ci of payload.cities; let i = index">{{ci}}</option>
+        </select>
+      </div>
+    <div>
+      <label>爱 好：</label>
+      <span *ngFor="let item of payload.hobbies; let key = index" >
+        <input [id]="'hobby'+key" type="checkbox" name="check" [(ngModel)]="item.checked">{{item.name}}
+        &nbsp;&nbsp;
+      </span>
+    </div>
+    <div>
+      <label>备 注：</label>
+      <textarea name="remark" [(ngModel)]="payload.remark"></textarea>
+    </div>
+
+  </div>
+
+  <hr>
+  <br>
+  <br>
+  <br>
+  <button (click)="getPayload()">获取Form数据</button>
+
+</form>
+<hr>
+<br>
+<br>
+<br>
+<div>
+  {{payload | json}}
+</div>

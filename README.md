@@ -1,27 +1,14 @@
-# Demo1
+学习Angular——浅度学习Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
+官网（官网是最好的老师哦，追求技术的大神可以继续深入啦）：https://angular.cn/
 
-## Development server
+与本Demo相关的博客整理：
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Angular基础教程+Demo项目——尽可能全面一些——第一节
 
-## Code scaffolding
+来点啰嗦：Angular是一个不错的框架，对于我这种追于简单应用的后端程序员来说，是一个较友好的前端框架了，
+当然也不能一概而论，还是需要一些前端基础的。
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+我感觉这里就不需要我来总结了，官方对Angular的定义已经很全面，而我写的总结博客里都有，所以这段文字真的是啰嗦....哈哈，人生漫漫，愿我们走在不断进步的路上
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+夜深了，告辞！！！打工人

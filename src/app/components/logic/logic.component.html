@@ -1,0 +1,20 @@
+<app-login-child #childComponent [dataParent]="dataParent" [methodParent]="methodParent"  (outer)="setOutputTran($event)"></app-login-child>
+
+<p>logic works!</p>
+
+<div id="div1">
+  This is ngOnInit--1
+</div>
+
+<div *ngIf="flag" id="div2">
+  This is ngOnInit--2
+</div>
+
+<div #myChild>
+  This is ViewChild--001
+</div>
+
+<button (click)="getChildComponent()">触发子组件方法</button>
+<button (click)="showDataChild()">显示子组件数据</button>
+<h3 #child></h3>
+<input [(ngModel)]="outputTran" style="min-width: 400px" disabled="disabled">

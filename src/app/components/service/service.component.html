@@ -1,0 +1,43 @@
+
+<h1>todoList</h1>
+
+<div class="center">
+  <h3>这个组件主要讲解service、localStorage以及灵活ngModule的运行</h3>
+  <h4>在Angular中，组件之间方法不可以互相引用（父子组件可以传值通讯），但是组件可以引用其他service(服务)的方法，创建service的命令 <i>ng g service services/dataStorage</i></h4>
+  <h4>以下，简单写了一个针对于service案例的简单逻辑，将数据的值存储在localStorage中，还利用了ngModule实现了列表数据的动态刷新</h4>
+  <br>
+  <br>
+  <div>
+    <input name="item"  [(ngModel)]="item" (keyup)="pushItems($event)">
+    <button (click)="pushItems(null)">添加事项</button>
+  </div>
+
+
+  <h3>待办事件</h3>
+  <ul>
+    <span *ngFor="let it of items; let key=index">
+      <!--若该事项为false，则在这里显示-->
+      <li  *ngIf="!it.checked">
+        <input  type="checkbox" [(ngModel)]="it.checked"  (click)="clickCheck(key)">{{it.title}}-----<button (click)="removeItems(key)" style="font-size: 15px">×</button>
+      </li>
+    </span>
+
+  </ul>
+
+  <br>
+  <br>
+  <hr/>
+  <hr/>
+  <br>
+  <br>
+  <h3>已办事件</h3>
+  <ul>
+   <span *ngFor="let it of items; let key=index">
+<!--若该事项为true，则在这里显示-->
+      <li  *ngIf="it.checked">
+        <input  type="checkbox" [(ngModel)]="it.checked"  (click)="clickCheck(key)">{{it.title}}-----<button (click)="removeItems(key)" style="font-size: 15px">×</button>
+      </li>
+   </span>
+  </ul>
+
+</div>
