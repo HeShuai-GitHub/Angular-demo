@@ -9,7 +9,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'demo1'; // 定义属性
 
+  exist: any = true;
+
   constructor(){  // 构造函数
 
+  }
+
+  changeTitle(): void{
+    this.title = this.title + '1';
+  }
+
+  destroy(): void{
+    this.exist = !this.exist;
   }
 }

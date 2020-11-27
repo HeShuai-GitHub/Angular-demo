@@ -1,0 +1,22 @@
+<h3>新闻列表</h3>
+<h4>Url请求</h4>
+<ul>
+  <li *ngFor="let item of list, let key=index">
+    <!--[routerLink]="'newsDetail'" ==> http://127.0.0.1:4200/news/newsDetail
+        [routerLink]="'/newsDetail'" ==> http://127.0.0.1:4200/newsDetail
+    -->
+    <a *ngIf="key % 2 ==0" [routerLink]="['/newsDetail']" [queryParams]="{sid:key}">{{item}}</a>
+    <a *ngIf="key % 2 !=0" [routerLink]="['/newsDetailDynamic/',key]">{{item}}</a>
+  </li>
+</ul>
+
+<hr>
+<br>
+<h4>TS跳转</h4>
+<ul>
+  <li *ngFor="let item of list, let key=index">
+    <a *ngIf="key % 2 ==0" (click)="get(key)">{{item}}</a>
+    <a *ngIf="key % 2 !=0" (click)="dynamic(key)">{{item}}</a>
+  </li>
+</ul>
+
